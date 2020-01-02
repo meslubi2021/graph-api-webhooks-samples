@@ -54,8 +54,9 @@ app.post('/facebook', function(req, res) {
 app.post('/instagram', function(req, res) {
   console.log('Instagram request body:');
   console.log(req.body);
+  body = req.body + " test."
   // Process the Instagram updates here
-  received_updates.unshift(req.body);
+  received_updates.unshift(body);
   res.sendStatus(200);
 });
 
