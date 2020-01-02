@@ -36,7 +36,7 @@ app.get(['/facebook', '/instagram'], function(req, res) {
   }
 });
 
-app.post('/facebook', function(req, res) {
+/*app.post('/facebook', function(req, res) {
   console.log('Facebook request body:', req.body);
 
   if (!req.isXHubValid()) {
@@ -49,14 +49,13 @@ app.post('/facebook', function(req, res) {
   // Process the Facebook updates here
   received_updates.unshift(req.body);
   res.sendStatus(200);
-});
+});*/
 
 app.post('/instagram', function(req, res) {
   console.log('Instagram request body:');
   console.log(req.body);
-  body = req.body + " test."
   // Process the Instagram updates here
-  received_updates.unshift(body);
+  received_updates.unshift(req.body);
   res.sendStatus(200);
 });
 
